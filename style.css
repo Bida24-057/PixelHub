@@ -1,146 +1,149 @@
-/* Google Colors */
+
+/* Color Theme (Office/Google-inspired without white) */
 :root {
-    --primary-blue: #1a73e8;
-    --primary-red: #ea4335;
-    --primary-yellow: #fbbc05;
-    --primary-green: #34a853;
-    --text-color: #202124;
-    --background-color: #f8f9fa;
+  --primary-blue: #1a73e8;
+  --primary-green: #34a853;
+  --primary-yellow: #fbbc05;
+  --primary-red: #ea4335;
+  --dark-bg: #202124;
+  --card-bg: #2c2c2c;
+  --text-light: #e8eaed;
 }
 
-/* General Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* General Page Styles */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    background-image: url('background.jpg'); /* Add your image to the project folder */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    backdrop-filter: blur(10px);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
-/* Container */
+/* Container for consistent layout */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Header */
-header {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Navigation Bar Styling */
+.navbar {
+  background-color: var(--primary-blue);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-header h1 {
-    color: var(--primary-blue);
-    font-size: 24px;
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
+.nav-link {
+  color: white !important;
+  transition: background-color 0.3s ease;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--primary-blue);
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
 
 /* Hero Section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+header {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+header .btn {
+  background-color: var(--primary-green);
+  border: none;
+  color: white;
+  font-weight: bold;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--primary-blue);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: var(--primary-green);
+header .btn:hover {
+  background-color: var(--primary-yellow);
+  color: black;
 }
 
 /* Footer */
 footer {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--text-color);
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  padding: 20px;
+  text-align: center;
 }
 
-/* Responsive Design */
+/* Product Cards (on products.html) */
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-light);
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-blue);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-green);
+}
+
+.btn-outline-light {
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--primary-red);
+  color: white;
+}
+
+/* Contact Form */
+form input, form textarea {
+  background-color: #333;
+  color: var(--text-light);
+  border: 1px solid #555;
+}
+
+form input:focus, form textarea:focus {
+  border-color: var(--primary-yellow);
+  outline: none;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 20px;
-    }
+  .container {
+    width: 95%;
+  }
 
-    .btn {
-        padding: 10px 20px;
-    }
-    }
- backdrop-filter:blur(10px);
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    padding: 10px;
+  }
+}
