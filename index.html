@@ -1,47 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelHub</title>
-    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelHub - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to PixelHub </h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Latest Google Pixel Phones</h2>
-            <p>Explore the best Google Pixel phones for every budget and need.</p>
-        </section>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">PixelHub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <section class="featured-phones">
-            <h3>Featured Phones</h3>
-            <div class="phone">
-                <img src="pixel_6.jpg" alt="Google Pixel 6">
-                <p>Google Pixel 6</p>
-                <p>$599</p>
-            </div>
-            <div class="phone">
-                <img src="pixel_7.jpg" alt="Google Pixel 7">
-                <p>Google Pixel 7</p>
-                <p>$699</p>
-            </div>
-        </section>
-    </main>
+  <header class="py-5 text-center text-white bg-dark">
+    <div class="container">
+      <h1 class="display-4">Welcome to PixelHub</h1>
+      <p class="lead">Explore the best Google Pixel devices and accessories.</p>
+      <a href="products.html" class="btn btn-light btn-lg">Shop Now</a>
+    </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 Pixel Phones Shop</p>
-    </footer>
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 PixelHub. All rights reserved.</p>
+    <button class="btn btn-outline-light btn-sm mt-2" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
